@@ -9,6 +9,7 @@
 /* .omg{
   display: flex;
 } */
+
 body {
   width: 100vw;
   height: 100vh;
@@ -16,21 +17,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #191c29;
+  background: #1b1e2c;
 }
 .main {
   margin-top: 50px;
 }
 .nexxt{
   /* backdrop-filter: blur(2px); */
-  background-color: #0b102377;
+  
   width:380px ;
   height: 480px;
-  border: 0.7px solid rgba(32, 178, 171, 0.321);
+  /* border: 0.7px solid rgba(178, 235, 232, 0); */
   border-radius: 10px;
-  box-shadow: 1px 3px 5px rgba(7, 7, 7, 0.888);
+  box-shadow: 1px 7px 15px rgba(7, 7, 7, 0.888);
   overflow-y: hidden;
   transition: all 0.5s;
+   background-image: url("D:\react\react-projects\weatherapp\src\bimg.jpg");
 }
 
 .nexxt:hover{
@@ -55,13 +57,18 @@ body {
  
 }
 .next{
+  margin: 10px;
+  background-color: #e4600d;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  border:0.2px solid #f7f7fac6;
+  border-radius: 5px;
+  backdrop-filter: blur(2px);
 
 }
 .text-centerr{
-  background-color: #25232181;
+  background-color: #131c1d00;
   margin: 0 50px;
   padding: 5px;
   display: flex;
@@ -74,7 +81,8 @@ body {
 }
 
 .weather-panel {
-  background-image: url("D:\react\react-projects\weatherapp\src\bimg.jpg");
+ background-image: linear-gradient(rgb(191, 29, 194),rgb(198, 20, 159),rgb(189, 22, 66));
+  
   height: 620px;
   background-size: cover;
   border-radius: 20px;

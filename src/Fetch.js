@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-// var name = "india";
-const url = "https://weatherapi-com.p.rapidapi.com/current.json?q=india";
+const url = "https://weatherapi-com.p.rapidapi.com/current.json?q=buguda";
 const options = {
   method: "GET",
   headers: {
