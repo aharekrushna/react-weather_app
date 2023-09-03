@@ -1,38 +1,107 @@
-/* :root {
-  --card-height: 300px;
-  --card-width: calc(var(--card-height) / 1.5);
-} */
-/* * {
-  box-sizing: border-box;
-  color: aliceblue;
-} */
-/* .omg{
-  display: flex;
-} */
+
 
 body {
-  width: 100vw;
-  height: 100vh;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 4px;
   background: #1b1e2c;
+  color: #fff;
+}
+.navbar{
+  height: 100px;
+  background-color: #ffffff57;
+ width: 100vw;
+  position: fixed;
+  top:4px;
+  z-index: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.495);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 15px;
+  
+  
+  
+}
+.weatherlogo{
+  height: 85px;
+  border-radius: 2px;
+  filter: brightness(100%);
+  margin-left: 5px;
+}
+.nav-contents{
+  background-color: rgba(0, 0, 0, 0.503);
+  height: 95px;
+  margin-right: 15px;
+  border-radius: 3px;
+}
+.parent{
+  display: grid;
+  /* height: 1000px; */
+  grid-template-columns : repeat(9, 159px);
+  /* grid-template-rows: repeat(4,auto); */
+   gap: 7px;
+  margin-top: 120px;
+  margin-right:10px;
+  margin-left:10px;
+  height: 100vh;
+
+}
+.item1{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: #e45f0d30;
+}
+.item2{
+  grid-column-start: 4;
+  grid-column-end: 8;
+}
+.item3{
+  grid-column-start: 8;
+  grid-column-end: 10;
+}
+.item4{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  height: 305px;
+  
+}
+.item5{
+  grid-column-start:5;
+  grid-column-end: 10;
+}
+.ch{
+  background-color: #f7f4f34a;
+  border-radius: 5px;
+  /* height: 50px; */
+ 
+}
+.lo-img{
+  height: 80px;
+  top: 0;
+
+}
+.nav-contents{
+  width: 100vw;
 }
 .main {
-  margin-top: 50px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* visibility: hidden; */
 }
 .nexxt{
-  /* backdrop-filter: blur(2px); */
+
   
   width:380px ;
   height: 480px;
-  /* border: 0.7px solid rgba(178, 235, 232, 0); */
+
   border-radius: 10px;
   box-shadow: 1px 7px 15px rgba(7, 7, 7, 0.888);
   overflow-y: hidden;
   transition: all 0.5s;
-   background-image: url("D:\react\react-projects\weatherapp\src\bimg.jpg");
+   background-image: url("D:\react\react-projects\weatherapp\images\bimg.jpg");
 }
 
 .nexxt:hover{
@@ -83,14 +152,14 @@ body {
 .weather-panel {
  background-image: linear-gradient(rgb(191, 29, 194),rgb(198, 20, 159),rgb(189, 22, 66));
   
-  height: 620px;
+  height: 650px;
   background-size: cover;
   border-radius: 20px;
   box-shadow: 25px 25px 40px 0px rgba(0,0,0,0.33);
   color: #fff;
   /* overflow: hidden; */
   position: relative;
-  width: 420px;
+  width: 80%;
   
   display: flex;
   justify-content: center;
@@ -109,96 +178,4 @@ transition: all ease 0.5s;
     }
   }
 }
-/* .card {
-  width: var(--card-width);
-  height: var(--card-height);
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 0 36px;
-  perspective: 2500px;
-  margin: 0 50px;
-}
 
-.cover-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.wrapper {
-  transition: all 0.5s;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-}
-.card-img{
-height: 200px;
-}
-.card:hover .wrapper {
-  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-}
-
-.wrapper::before,
-.wrapper::after {
-  content: "";
-  opacity: 0;
-  width: 100%;
-  height: 80px;
-  transition: all 0.5s;
-  position: absolute;
-  left: 0;
-}
-.wrapper::before {
-  top: 0;
-  height: 100%;
-  background-image: linear-gradient(
-    to top,
-    transparent 46%,
-    rgba(12, 13, 19, 0.5) 68%,
-    rgba(12, 13, 19) 97%
-  );
-}
-.wrapper::after {
-  bottom: 0;
-  opacity: 1;
-  background-image: linear-gradient(
-    to bottom,
-    transparent 46%,
-    rgba(12, 13, 19, 0.5) 68%,
-    rgba(12, 13, 19) 97%
-  );
-}
-
-.card:hover .wrapper::before,
-.wrapper::after {
-  opacity: 1;
-}
-
-.card:hover .wrapper::after {
-  height: 120px;
-}
-.title {
-  width: 100%;
-  transition: transform 0.5s;
-}
-.card:hover .title {
-  transform: translate3d(0%, -50px, 100px);
-}
-
-.character {
-  width: 100%;
-  opacity: 0;
-  transition: all 0.5s;
-  position: absolute;
-  z-index: -1;
-}
-
-.card:hover .character {
-  opacity: 1;
-  transform: translate3d(0%, -30%, 100px);
-} */
